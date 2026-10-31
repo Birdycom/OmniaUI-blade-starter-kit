@@ -1,0 +1,7 @@
+/* Your brand. Every OmniaUI component reads these tokens; light-dark() gives the light and the dark value.
+   The full list: https://omniaui.eu/ui/components/theme (or node_modules/@birdycom/omniacss/dist/oc-theme.css).
+   Palette colors: var(--color-<name>-<shade>), for example var(--color-vividblue-80) or var(--color-ral3020). */
+:root {
+    /* --oc-primary: light-dark(var(--color-vividblue-95), var(--color-vividblue-100)); */
+    /* --oc-radius: 0.5rem; */
+}

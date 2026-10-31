@@ -1,0 +1,96 @@
+/* The few layout rules this starter kit adds on top of OmniaUI. Colors, radius and shadows come from the OmniaUI theme
+   tokens, so light and dark mode work without extra rules. Layer "app" sits between the components and the utilities:
+   a utility class in a view always wins. */
+@layer app {
+    body {
+        background: var(--oc-background);
+        color: var(--oc-foreground);
+        font-family: var(--oc-font-sans);
+    }
+
+    [x-cloak] { display: none !important; }
+
+    .app-muted { color: var(--oc-muted-foreground); font-size: 0.875rem; }
+
+    /* Brand: logo mark + app name */
+    .app-brand { display: inline-flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none; }
+    .app-brand-mark {
+        display: inline-grid;
+        place-items: center;
+        flex-shrink: 0;
+        inline-size: 2rem;
+        block-size: 2rem;
+        border-radius: var(--oc-radius);
+        background: var(--oc-primary);
+        color: var(--oc-primary-foreground);
+    }
+    .app-brand-mark svg { inline-size: 1.15rem; block-size: 1.15rem; }
+
+    /* App shell */
+    .app-appbar-title { font-size: 0.95rem; }
+    .app-user-menu { min-inline-size: 15rem; }
+    .app-user-menu form { margin: 0; }
+    .app-sheet-nav { inline-size: 100%; border: 0; background: transparent; }
+    .app-topbar { position: sticky; inset-block-start: 0; z-index: 10; }
+    .app-page { inline-size: min(72rem, 100% - 2rem); margin-inline: auto; padding-block: 1.5rem; }
+    @media (max-width: 47.99rem) {
+        .app-collapse, .app-desktop-only { display: none; }
+    }
+    @media (min-width: 48rem) {
+        .app-mobile-only { display: none; }
+    }
+
+    /* Auth pages */
+    .app-auth { display: grid; place-items: center; min-block-size: 100dvh; padding: 1.5rem; }
+    .app-auth--muted { background: var(--oc-muted); }
+    .app-auth-column { display: flex; flex-direction: column; gap: 1.5rem; inline-size: min(24rem, 100%); }
+    .app-auth-column--wide { inline-size: min(28rem, 100%); }
+    .app-auth-card { padding: 2rem 2.25rem; }
+    .app-auth-logo { align-self: center; color: var(--oc-foreground); }
+    .app-auth-logo svg { inline-size: 2.25rem; block-size: 2.25rem; }
+    .app-auth-switch { color: var(--oc-muted-foreground); font-size: 0.875rem; text-align: center; }
+    .app-password-row { position: relative; }
+    .app-forgot { position: absolute; inset-block-start: 0; inset-inline-end: 0; font-size: 0.8rem; }
+    .app-otp { display: grid; justify-items: center; }
+
+    /* Settings */
+    .app-page-head { display: grid; gap: 1rem; margin-block-end: 1.5rem; }
+    .app-settings { display: grid; gap: 2rem; }
+    @media (min-width: 48rem) {
+        .app-settings { grid-template-columns: 13rem minmax(0, 1fr); }
+    }
+    .app-nav-link { display: flex; align-items: center; gap: 0.6rem; }
+    .app-settings-body { display: grid; gap: 1.25rem; align-content: start; max-inline-size: 36rem; }
+    .app-settings-content { display: grid; gap: 2.5rem; }
+    .app-settings-section,
+    .app-danger-zone { display: grid; gap: 1rem; }
+    .app-passkeys { display: grid; margin: 0; padding: 0; list-style: none; }
+    .app-passkey { display: flex; align-items: center; gap: 1rem; padding: 1rem; }
+    .app-passkey + .app-passkey { border-block-start: 1px solid var(--oc-border); }
+    .app-passkey-icon {
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        inline-size: 2.5rem;
+        block-size: 2.5rem;
+        border-radius: var(--oc-radius);
+        background: var(--oc-muted);
+        color: var(--oc-muted-foreground);
+    }
+    .app-passkey-text { flex: 1; min-inline-size: 0; }
+    .app-qr { display: grid; place-items: center; min-block-size: 12rem; padding: 1rem; border-radius: var(--oc-radius); background: #fff; }
+    .app-qr svg { inline-size: 12rem; block-size: 12rem; }
+
+    /* Dashboard */
+    .app-dashboard { display: grid; gap: 1.5rem; }
+    .app-dashboard-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 64rem) {
+        .app-dashboard-grid { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+    }
+
+    /* Welcome page */
+    .app-welcome-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; inline-size: min(72rem, 100% - 2rem); margin-inline: auto; padding-block: 1rem; }
+    .app-welcome-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; inline-size: min(72rem, 100% - 2rem); margin: 0 auto 4rem; }
+    .app-welcome-link { color: inherit; text-decoration: none; transition: border-color var(--oc-transition-fast); }
+    .app-welcome-link:hover { border-color: var(--oc-primary); }
+}

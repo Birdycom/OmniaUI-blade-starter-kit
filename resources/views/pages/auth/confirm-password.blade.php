@@ -1,0 +1,26 @@
+<x-layouts::auth :title="__('Confirm password')">
+    <div class="flex flex-col gap-1">
+        <x-auth-header
+            :title="__('Confirm password')"
+            :description="__('This is a secure area of the application. Please confirm your password before continuing.')"
+        />
+
+        <x-auth-session-status :status="session('status')" />
+
+        {{-- @chisel-passkeys --}}
+        <x-passkey-verify
+            options-route="passkey.confirm-options"
+            submit-route="passkey.confirm"
+            :label="__('Confirm with passkey')"
+            :loading-label="__('Confirming...')"
+            :separator="__('Or confirm with password')"
+        />
+        {{-- @end-chisel-passkeys --}}
+
+        <form method="POST" action="{{ route('password.confirm.store') }}" class="flex flex-col gap-1">
+            @csrf
+            <x-password-field :label="__('Password')" required autocomplete="current-password" :placeholder="__('Password')" />
+            <x-oc::button type="submit" class="w-full" data-test="confirm-password-button">{{ __('Confirm') }}</x-oc::button>
+        </form>
+    </div>
+</x-layouts::auth>
