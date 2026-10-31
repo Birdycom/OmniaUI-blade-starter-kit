@@ -1,0 +1,15 @@
+/* Layer order: OmniaUI components, then this kit's layout rules, then the OmniaCSS utilities (a utility class wins). */
+@layer omniaui, app, omnia;
+
+/* Your brand: theme token overrides. */
+@import './theme.css';
+@import './layout.css';
+
+/* OmniaUI components and blocks, then the OmniaCSS utilities. Both are pruned to what the views use. */
+@omniaui;
+@omnia;
+
+/* The app font, loaded in vite.config.js. */
+:root {
+    --oc-font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+}
