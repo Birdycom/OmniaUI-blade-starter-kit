@@ -24,10 +24,10 @@
             <div class="oc-block-shell-main">
                 <header class="oc-block-appbar">
                     <button class="oc-btn oc-btn--ghost oc-btn--icon oc-block-shell-menu-button" type="button" command="show-modal" commandfor="app-mobile-nav" aria-label="{{ __('Open menu') }}">
-                        <x-icon name="menu" />
+                        <x-icon name="mdi:menu" />
                     </button>
                     <label class="oc-btn oc-btn--ghost oc-btn--icon app-collapse" for="app-sidebar-toggle" title="{{ __('Collapse sidebar') }}">
-                        <x-icon name="menu" /><span class="oc-visually-hidden">{{ __('Collapse sidebar') }}</span>
+                        <x-icon name="mdi:menu" /><span class="oc-visually-hidden">{{ __('Collapse sidebar') }}</span>
                     </label>
                     <strong class="app-appbar-title">{{ $title ?? '' }}</strong>
                     <div class="oc-block-appbar-actions">

@@ -6,7 +6,7 @@
         <span class="oc-avatar oc-avatar--sm">{{ $user->initials() }}</span>
     @else
         <x-oc::user :name="$user->name" :email="$user->email" :initials="$user->initials()" size="sm" />
-        <x-icon name="chevrons" class="ml-auto" width="16" height="16" />
+        <x-icon name="mdi:unfold-more-horizontal" class="ml-auto h-1 w-1" />
     @endif
 </button>
 <div class="oc-dropdown-menu app-user-menu" id="{{ $id }}" popover>
@@ -14,9 +14,9 @@
         <x-oc::user :name="$user->name" :email="$user->email" :initials="$user->initials()" size="sm" />
     </div>
     <div class="oc-dropdown-separator"></div>
-    <a class="oc-dropdown-item" href="{{ route('profile.edit') }}"><x-icon name="settings" width="16" height="16" /> {{ __('Settings') }}</a>
+    <a class="oc-dropdown-item" href="{{ route('profile.edit') }}"><x-icon name="mdi:cog-outline" class="h-1 w-1" /> {{ __('Settings') }}</a>
     <form method="POST" action="{{ route('logout') }}">
         @csrf
-        <button type="submit" class="oc-dropdown-item w-full" data-test="logout-button"><x-icon name="logout" width="16" height="16" /> {{ __('Log out') }}</button>
+        <button type="submit" class="oc-dropdown-item w-full" data-test="logout-button"><x-icon name="mdi:logout" class="h-1 w-1" /> {{ __('Log out') }}</button>
     </form>
 </div>

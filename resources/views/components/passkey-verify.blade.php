@@ -46,7 +46,7 @@
     <template x-if="supported">
         <div class="flex flex-col gap-1">
             <button type="button" class="oc-btn oc-btn--outline w-full" x-on:click="verify()" x-bind:disabled="loading">
-                <x-icon name="key" width="16" height="16" />
+                <x-icon name="mdi:key-outline" class="h-1 w-1" />
                 <span x-show="!loading">{{ $label }}</span>
                 <span x-show="loading" x-cloak>{{ $loadingLabel }}</span>
             </button>

@@ -93,4 +93,18 @@
     .app-welcome-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; inline-size: min(72rem, 100% - 2rem); margin: 0 auto 4rem; }
     .app-welcome-link { color: inherit; text-decoration: none; transition: border-color var(--oc-transition-fast); }
     .app-welcome-link:hover { border-color: var(--oc-primary); }
+    .app-welcome { --oc-container: 72rem; }
+    .app-welcome .oc-block-features-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+    .app-welcome .oc-block-feature-icon iconify-icon { inline-size: 1.5rem; block-size: 1.5rem; }
+    .app-welcome-code { position: relative; padding: 2rem 1rem; }
+    /* A terminal stays dark, also in the light theme: the dark-theme text colors, set directly. */
+    .app-welcome-code .oc-code-window { color-scheme: dark; }
+    .app-welcome-code .oc-code-window__body { color: var(--color-frostblue-10); }
+    .app-welcome-code .oc-code-window__title { color: var(--color-mistblue-70); }
+    .app-welcome-code > .oc-icon-tile { position: absolute; z-index: 1; }
+    .app-welcome-code > .oc-icon-tile:nth-child(1) { inset: 0 auto auto 8%; }
+    .app-welcome-code > .oc-icon-tile:nth-child(2) { inset: 0.5rem 4% auto auto; animation-delay: -2s; }
+    .app-welcome-code > .oc-icon-tile:nth-child(3) { inset: auto 10% 0 auto; animation-delay: -4s; }
+    .app-welcome-code .oc-code-window__body { overflow-x: auto; }
+    .app-welcome-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1rem; inline-size: min(72rem, 100% - 2rem); margin-inline: auto; padding-block: 1.5rem; border-block-start: 1px solid var(--oc-border); color: var(--oc-muted-foreground); font-size: 0.875rem; }
 }

@@ -6,13 +6,13 @@
 
         <div class="oc-stat-card-grid">
             <x-oc::stat-card value="2,481" :label="__('Visitors')" trend="+12%" tone="accent" stripe>
-                <x-slot:icon><x-icon name="users" /></x-slot:icon>
+                <x-slot:icon><x-icon name="mdi:account-multiple-outline" /></x-slot:icon>
             </x-oc::stat-card>
             <x-oc::stat-card value="€ 18,240" :label="__('Revenue')" trend="+4.6%" tone="success" stripe>
-                <x-slot:icon><x-icon name="chart" /></x-slot:icon>
+                <x-slot:icon><x-icon name="mdi:chart-bar" /></x-slot:icon>
             </x-oc::stat-card>
             <x-oc::stat-card value="312" :label="__('Messages')" trend="-3%" down tone="warning" stripe>
-                <x-slot:icon><x-icon name="mail" /></x-slot:icon>
+                <x-slot:icon><x-icon name="mdi:email-outline" /></x-slot:icon>
             </x-oc::stat-card>
         </div>
 
@@ -61,7 +61,7 @@
                                 <td><x-oc::user :name="$name" size="sm" /></td>
                                 <td>{{ $plan }}</td>
                                 <td><x-oc::badge :variant="$variant">{{ $state }}</x-oc::badge></td>
-                                <td class="text-right">{{ now()->subDays($i * 3)->isoFormat('LL') }}</td>
+                                <td class="text-right">{{ now()->subDays($i * 3)->toDateString() }}</td>
                             </tr>
                         @endforeach
                     </tbody>

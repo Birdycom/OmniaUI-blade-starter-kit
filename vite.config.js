@@ -1,9 +1,11 @@
 import laravel from 'laravel-vite-plugin';
 import { bunny } from 'laravel-vite-plugin/fonts';
 import { defineConfig, lazyPlugins } from 'vite-plus';
+import omniaIcons from './vite-icons.js';
 
 export default defineConfig({
     plugins: lazyPlugins(() => [
+        omniaIcons(),
         laravel({
             input: [
                 'resources/css/app.css',

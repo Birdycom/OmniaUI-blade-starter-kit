@@ -107,6 +107,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Demo Login
+    |--------------------------------------------------------------------------
+    |
+    | For public demos: when both values are set, the login form is filled in
+    | with these credentials. Leave them empty in every other environment.
+    |
+    */
+
+    'demo' => [
+        'email' => env('DEMO_EMAIL'),
+        'password' => env('DEMO_PASSWORD'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Maintenance Mode Driver
     |--------------------------------------------------------------------------
     |

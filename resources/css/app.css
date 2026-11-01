@@ -1,5 +1,5 @@
-/* Layer order: OmniaUI components, then this kit's layout rules, then the OmniaCSS utilities (a utility class wins). */
-@layer omniaui, app, omnia;
+/* Layer order: webicon default size, OmniaUI components, this kit's layout rules, then the OmniaCSS utilities (a utility class wins). */
+@layer webicons, omniaui, app, omnia;
 
 /* Your brand: theme token overrides. */
 @import './theme.css';
@@ -8,6 +8,15 @@
 /* OmniaUI components and blocks, then the OmniaCSS utilities. Both are pruned to what the views use. */
 @omniaui;
 @omnia;
+
+/* The OmniaCSS webicons (<iconify-icon>, see components/icon.blade.php): 1.25rem unless a class sizes them. */
+@layer webicons {
+    iconify-icon {
+        inline-size: 1.25rem;
+        block-size: 1.25rem;
+        flex-shrink: 0;
+    }
+}
 
 /* The app font, loaded in vite.config.js. */
 :root {

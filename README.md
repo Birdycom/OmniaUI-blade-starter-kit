@@ -31,6 +31,15 @@ Add more with `npx omniaui add <name> --framework blade`, or copy the HTML of an
 OmniaUI Pro blocks (CMS dashboard, charts, kanban …) work in this kit too once you have a license: install
 `birdycom/omniaui-pro-laravel` and they appear in the same `@omniaui;` build.
 
+## Icons
+
+The icons are the OmniaCSS webicons, drawn by the `iconify-icon` web component. These Iconify sets are installed:
+Material Design Icons (`mdi:`), MDI Light (`mdi-light:`), Material Symbols (`material-symbols:`), SVG Spinners
+(`svg-spinners:`), Flags (`flag:`) and VSCode Icons (`vscode-icons:`). Write `<x-icon name="mdi:cog-outline" />` (`resources/views/components/icon.blade.php`) anywhere in
+`resources/`; `vite-icons.js` finds every `<set>:<name>` and bundles only those icons, so the app never calls the
+Iconify API. Size an icon with classes (`h-1 w-1`), the default is 1.25rem. Find names on
+https://omniaui.eu/ui/webicons.
+
 ## AI assistants
 
 The kit is written so assistants can extend it without falling back to Tailwind:

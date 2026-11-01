@@ -106,7 +106,7 @@
                     <ul class="oc-card app-passkeys" role="list">
                         @foreach ($passkeys as $passkey)
                             <li class="app-passkey">
-                                <span class="app-passkey-icon"><x-icon name="key" /></span>
+                                <span class="app-passkey-icon"><x-icon name="mdi:key-outline" /></span>
                                 <div class="app-passkey-text">
                                     <p class="font-medium">
                                         {{ $passkey->name }}
