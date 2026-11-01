@@ -21,5 +21,14 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // A public demo (DEMO_EMAIL and DEMO_PASSWORD in .env) gets the account its login form fills in.
+        if (config('app.demo.email') && config('app.demo.password')) {
+            User::factory()->create([
+                'name' => 'Demo User',
+                'email' => config('app.demo.email'),
+                'password' => config('app.demo.password'),
+            ]);
+        }
     }
 }

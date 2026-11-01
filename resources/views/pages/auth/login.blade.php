@@ -11,10 +11,10 @@
         <form method="POST" action="{{ route('login.store') }}" class="flex flex-col gap-1">
             @csrf
 
-            <x-field name="email" :label="__('Email address')" type="email" required autofocus autocomplete="email" placeholder="email@example.com" />
+            <x-field name="email" :label="__('Email address')" type="email" required autofocus autocomplete="email" placeholder="email@example.com" :value="config('app.demo.email')" />
 
             <div class="app-password-row">
-                <x-password-field :label="__('Password')" required autocomplete="current-password" :placeholder="__('Password')" />
+                <x-password-field :label="__('Password')" required autocomplete="current-password" :value="config('app.demo.password')" :placeholder="__('Password')" />
                 @if (Route::has('password.request'))
                     <a class="oc-link app-forgot" href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
                 @endif
