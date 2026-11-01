@@ -4,7 +4,7 @@
         @include('partials.head', ['title' => __('Welcome')])
     </head>
     <body class="app-welcome">
-        @php($start = auth()->check() ? route('dashboard') : (Route::has('register') ? route('register') : route('login')))
+        @php($start = auth()->check() ? route('dashboard') : route('login'))
 
         <header class="app-welcome-bar">
             <x-app-logo href="{{ route('home') }}" />
