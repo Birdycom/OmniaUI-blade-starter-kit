@@ -62,8 +62,14 @@
     .app-nav-link { display: flex; align-items: center; gap: 0.6rem; }
     .app-settings-body { display: grid; gap: 1.25rem; align-content: start; max-inline-size: 36rem; }
     .app-settings-content { display: grid; gap: 2.5rem; }
-    .app-settings-section,
-    .app-danger-zone { display: grid; gap: 1rem; }
+    .app-settings-section { display: grid; gap: 1rem; }
+    .app-danger-zone { display: grid; gap: 1.5rem; }
+    /* Delete account: the warning and the button in one light box with red text, the same in light and dark mode. */
+    .app-danger-box { display: grid; justify-items: start; gap: 1rem; padding: 1rem; border-radius: 0.5rem; background: var(--color-linen-20); }
+    .app-danger-box-text { display: grid; gap: 0.5rem; color: var(--color-red-60); }
+    .app-danger-box-text p { margin: 0; }
+    .app-danger-box-title { font-weight: 500; }
+    .app-danger-box-text p + p { font-size: 0.875rem; }
     .app-passkeys { display: grid; margin: 0; padding: 0; list-style: none; }
     .app-passkey { display: flex; align-items: center; gap: 1rem; padding: 1rem; }
     .app-passkey + .app-passkey { border-block-start: 1px solid var(--oc-border); }
