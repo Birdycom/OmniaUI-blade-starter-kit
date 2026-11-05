@@ -56,7 +56,7 @@
                         <tr><th>{{ __('Name') }}</th><th>{{ __('Plan') }}</th><th>{{ __('Status') }}</th><th class="text-right">{{ __('Joined') }}</th></tr>
                     </thead>
                     <tbody>
-                        @foreach ([['Ada Lovelace', 'Team', 'success', __('Active')], ['Alan Turing', 'Pro', 'success', __('Active')], ['Grace Hopper', 'Free', 'warning', __('Trial')], ['Linus Torvalds', 'Pro', 'secondary', __('Invited')]] as $i => [$name, $plan, $variant, $state])
+                        @foreach ([['Customer 1', 'Team', 'success', __('Active')], ['Customer 2', 'Pro', 'success', __('Active')], ['Customer 3', 'Free', 'warning', __('Trial')], ['Customer 4', 'Pro', 'secondary', __('Invited')]] as $i => [$name, $plan, $variant, $state])
                             <tr>
                                 <td><x-oc::user :name="$name" size="sm" /></td>
                                 <td>{{ $plan }}</td>
