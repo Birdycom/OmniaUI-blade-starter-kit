@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc93df41ef9d071053e7934fbeefff91",
+    "content-hash": "9439cd47371dc1f321b0e7276d0505c0",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -63,16 +63,16 @@
         },
         {
             "name": "birdycom/omniaui-laravel",
-            "version": "v0.15.1",
+            "version": "v0.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Birdycom/OmniaUI-Laravel.git",
-                "reference": "0d13b4b2065418889a7c1ae2903ab7eb5dc30171"
+                "reference": "5459bf31e429b4576cb3c987972e0c79cf306a4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Birdycom/OmniaUI-Laravel/zipball/0d13b4b2065418889a7c1ae2903ab7eb5dc30171",
-                "reference": "0d13b4b2065418889a7c1ae2903ab7eb5dc30171",
+                "url": "https://api.github.com/repos/Birdycom/OmniaUI-Laravel/zipball/5459bf31e429b4576cb3c987972e0c79cf306a4d",
+                "reference": "5459bf31e429b4576cb3c987972e0c79cf306a4d",
                 "shasum": ""
             },
             "require": {
@@ -122,8 +122,8 @@
                 "issues": "https://github.com/Birdycom/OmniaUI/issues",
                 "source": "https://github.com/Birdycom/OmniaUI/tree/main/php-packages/omniaui-laravel"
             },
-            "time": "2026-11-10T18:53:26+00:00",
-            "published-time": "2026-11-10T19:14:46+00:00"
+            "time": "2026-11-17T01:13:03+00:00",
+            "published-time": "2026-11-17T01:19:04+00:00"
         },
         {
             "name": "brick/math",
